@@ -5,7 +5,7 @@ let books = [
       "likes": 1250,
       "liked": true,
       "price": 19.99,
-      "": 2018,
+      "publishedYear": 2018,
       "genre": "Fantasy",
       "comments": [
         {

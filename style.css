@@ -4,11 +4,14 @@
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: white;
   background-color: rgb(7,24,32);
 }
-
+main{
+     padding-left: 140px;
+ padding-right: 140px;
+}
 .navbar{
     background-color: rgb(10,34,44);
     height: 100px;
@@ -60,6 +63,56 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items:start;
-    
     width: 350px;
+}
+
+.section-book-main-header{
+    display: flex;
+    justify-content:space-between;
+    padding: 20px 10px;
+    align-items: center;
+    width: 350px;
+}
+
+.book-price{
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+.section-book-main{
+
+padding: 10px;
+
+
+}
+.book-comments{
+   
+    padding: 0 10px;
+}
+.book-commentForm{
+    height: 100px;
+    padding: 10px;
+}
+
+.book-form{
+    padding: 0 10px;
+   
+}
+
+.book-input{
+    width: 290px;
+    height: 25px;
+    background-color: rgb(16,69,90);
+    border: none;
+    
+}
+.btn{
+    width: 30px;
+}
+.input-feld{
+    display: flex;
+    gap: 5px;
+
 }
