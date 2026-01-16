@@ -1,4 +1,6 @@
 const bookImg = "assets/img/book.png"
+const fullHeart ="assets/img/full-heart.png"
+const emptyHeart ="assets/img/empty-heart.png"
 
 function renderBooks() {
     for (let i = 0; i< books.length; i++) {
@@ -12,10 +14,8 @@ function renderBooks() {
     <section class="book-main">
     <div class="section-book-main-header">
       <span class="book-price">${books[i].price}€</span>
-       <button onclick="toggleLike(${i})"
-              class="${books[i].liked ? 'liked' : ''}">
-              ❤ ${books[i].likes}
-            </button>
+      <div class="image-heart"><span class="like-font">${books[i].likes}</span><img class="image-heart-toggel"  src="${emptyHeart}" alt="empty-heart"></div>
+
     </div>
    <table class="section-book-main">
   <tr>

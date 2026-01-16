@@ -116,3 +116,15 @@ padding: 10px;
     gap: 5px;
 
 }
+
+.image-heart{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap: 10px;
+    padding-right: 10px;
+}
+.image-heart-toggel{
+    height: 30px;
+    width: 30px;
+}
