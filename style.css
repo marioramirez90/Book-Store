@@ -127,4 +127,5 @@ padding: 10px;
 .image-heart-toggel{
     height: 30px;
     width: 30px;
+    cursor: pointer;
 }
