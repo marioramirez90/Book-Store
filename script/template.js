@@ -64,7 +64,7 @@ function renderComments(BookIndex){
   commentsRef.innerHTML = "";
   {
     if (!comments || comments.length === 0) {
-      commentsRef.innerHTML += `<div class="commts-comment">kein Kommentare;schreibe du das erste</div>`;
+      commentsRef.innerHTML += `<div class="commts-comment">kein Kommentare:schreibe du das erste</div>`;
     }else{ 
 
     for (let i = 0; i < books[BookIndex].comments.length; i++)
