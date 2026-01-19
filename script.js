@@ -71,7 +71,8 @@ function toggellike(i){
     books[i].liked = true;
 
   }
-renderBooks()
+  saveToLocalStorage()
+  renderBooks()
 }
 
 function renderComments(BookIndex){
@@ -108,5 +109,17 @@ renderComments(BookIndex);
   }else{
     return alert("Bitte schreibe einen Kommentar!") ;
   }
- 
+ saveToLocalStorage()
 }
+
+function saveToLocalStorage(){
+  localStorage.setItem("books",JSON.stringify(books));
+}
+
+function getFromLocalStorage(){
+  let BookItem = localStorage.getItem("books")
+  if(BookItem){
+    books = JSON.parse(BookItem)
+  }
+}
+getFromLocalStorage()
