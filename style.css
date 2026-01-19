@@ -9,8 +9,8 @@ body {
   background-color: rgb(7,24,32);
 }
 main{
-     padding-left: 140px;
- padding-right: 140px;
+     padding-left: 160px;
+ padding-right: 160px;
 }
 .navbar{
     background-color: rgb(10,34,44);
@@ -41,6 +41,9 @@ main{
     gap: 30px;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 1440px;
+    margin: 0 auto;
+
 }
 .book-tittel{
     display: flex;
@@ -179,5 +182,11 @@ h3{
 .btn{
     cursor: pointer;
     height: 25px;
-    width: 25px;
+    width: 30px;
+    transition: all 1s;
+    padding-left: 5px;
+}
+.btn:hover{
+      transform: scale(1.15);
+    filter: drop-shadow(0px 0px 4px blue);
 }

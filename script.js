@@ -1,6 +1,7 @@
 const bookImg = "assets/img/book.png"
 const fullHeart ="assets/icons/full-heart.png"
 const emptyHeart ="assets/icons/empty-heart.png"
+const buttenIcon ="assets/icons/papierflieger.png"
 
 
 function renderBooks() {
@@ -52,7 +53,7 @@ function renderBooks() {
     </div>
      <div class="input-feld">
      <input id="input-book-${i}" class="book-input" type="text" placeholder="Schreibe dein Kommentar">
-      <img class="btn" onclick="addBookComment(${i})" src="assets/icons/papierflieger.png" alt="butten"></div>
+      <img class="btn" onclick="addBookComment(${i})" src="${buttenIcon}" alt="butten"></div>
     </section>
     </article>`;
   renderComments(i);
