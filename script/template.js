@@ -3,6 +3,7 @@ function renderBooks() {
   
   const bookRef = document.getElementById("book");
   bookRef.innerHTML = "";
+  
     for (let i = 0; i< books.length; i++) {
       bookRef.innerHTML += ` <article class="Book-article">
     <header class="book-tittel">
@@ -13,7 +14,7 @@ function renderBooks() {
     </header>
     <section class="book-main">
     <div class="section-book-main-header">
-      <span class="book-price">${books[i].price}€</span>
+      <span class="book-price">${books[i].price.toFixed(2)}€</span>
       <div class="image-heart"><span class="like-font">${books[i].likes}</span>
       <img 
       class="image-heart-toggel"

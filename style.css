@@ -1,10 +1,11 @@
 * {
     box-sizing: border-box;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 body {
     margin: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  
     color: white;
     background-color: rgb(7, 24, 32);
 }
@@ -12,6 +13,7 @@ body {
 main {
     padding-left: 160px;
     padding-right: 160px;
+    padding-bottom: 100px;
 }
 
 .navbar {
@@ -22,247 +24,12 @@ main {
     align-items: center;
     margin-bottom: 30px;
 }
-
-.image-book {
-    height: 150px;
-    width: 350px;
-    object-fit: contain;
-    background-color: rgb(19, 70, 89);
-}
-
-.Book-article {
-    background-color: rgb(13, 51, 65);
-    height: 580px;
-    width: 350px;
-    border-radius: 18px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-.main-book {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 1440px;
-    margin: 0 auto;
-
-}
-
-.book-tittel {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.book-tittel h2 {
-    font-size: 20px;
-
-}
-
-.white-line {
-    background-color: rgb(94, 157, 183);
-    width: 350px;
-    height: 3px;
-}
-
-.book-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    width: 350px;
-}
-
-.section-book-main-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 10px;
-    align-items: center;
-    width: 350px;
-}
-
-.book-price {
-    color: red;
-    font-size: 20px;
-    font-weight: bold;
-
-}
-
-.section-book-main {
-    padding: 10px;
-}
-
-.book-comments {
-    padding: 0 10px;
-}
-
-.book-commentForm {
+footer{
+    background-color: rgb(10, 34, 44);
     height: 100px;
-    padding: 10px;
-}
-
-.book-form {
-    padding: 0 10px;
-}
-
-.book-input {
-    width: 290px;
-    height: 25px;
-    background-color: rgb(16, 69, 90);
-    border: none;
-}
-
-.btn {
-    width: 30px;
-}
-
-.input-feld {
-    display: flex;
-    gap: 5px;
-}
-
-.image-heart {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    padding-right: 10px;
-}
-
-.image-heart-toggel {
-    height: 30px;
-    width: 30px;
-    cursor: pointer;
-    transition: all 1s;
-}
-
-.image-heart-toggel:hover {
-    transform: scale(1.15);
-    filter: drop-shadow(0px 0px 4px red);
-}
-
-.section-book-bootom {
-    height: 120px;
-    overflow-x: hidden;
-    display: flex;
-}
-
-.section-book-bootom::-webkit-scrollbar {
-    display: none;
-}
-
-h3 {
-    font-size: 18px;
-    padding-top: 5px;
-    margin: 0;
-    padding-left: 10px;
-}
-
-.commts-box {
-    display: grid;
-    grid-template-columns: 120px 200px 1fr;
-    gap: 1px;
-    margin-bottom: 20px;
-    padding-left: 10px;
-}
-
-.commts-name {
-    font-size: 14px;
-}
-
-.commts-comment {
-    font-size: 14px;
-    padding-left: 10px;
-}
-
-#bookComments {
-    display: flex;
-    flex-direction: column-reverse;
-}
-
-.input-feld {
-    margin-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.book-input {
-    color: white;
-    font-size: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.btn {
-    cursor: pointer;
-    height: 25px;
-    width: 30px;
-    transition: all 1s;
-    padding-left: 5px;
-}
-
-.btn:hover {
-    transform: scale(1.15);
-    filter: drop-shadow(0px 0px 4px blue);
-}
-
-@media(max-width: 370px){
-.image-book {
-    width: 310px;
-}
-.Book-article {
-   
-    width: 310px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     
-}
-
-.book-tittel h2 {
-    font-size: 20px;
-
-}
-
-.white-line {
-   
-    width: 310px;
-   
-}
-
-.book-main {
-    width: 310px;
-}
-
-.section-book-main-header {
-    width: 310px;
-}
-
-.book-price {
-    color: red;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.book-input {
-    width: 250px;
-    height: 25px;
-    background-color: rgb(16, 69, 90);
-    border: none;
-}
-.commts-box {
-    display: grid;
-    grid-template-columns: 120px 150px 1fr;
-    gap: 1px;
-    margin-bottom: 20px;
-    padding-left: 10px;
-}
-.navbar{
-    width: 320px;
-}
-.navbar h1{
-    font-size: 18px;
-}
 }

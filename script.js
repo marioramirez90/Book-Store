@@ -3,6 +3,7 @@ const fullHeart ="assets/icons/full-heart.png"
 const emptyHeart ="assets/icons/empty-heart.png"
 const buttenIcon ="assets/icons/papierflieger.png"
 
+
 function toggellike(i){
   if (books[i].liked) {
     books[i].likes--
@@ -24,7 +25,7 @@ function addBookComment(BookIndex) {
   name: "Frederic",
   comment: bookInput});
  inputRef.value =""
- 
+
 renderComments(BookIndex);
   }else{
     return alert("Bitte schreibe einen Kommentar!") ;
