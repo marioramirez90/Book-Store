@@ -1,6 +1,6 @@
 const bookImg = "assets/img/book.png"
-const fullHeart ="assets/img/full-heart.png"
-const emptyHeart ="assets/img/empty-heart.png"
+const fullHeart ="assets/icons/full-heart.png"
+const emptyHeart ="assets/icons/empty-heart.png"
 
 
 function renderBooks() {
@@ -26,8 +26,6 @@ function renderBooks() {
       onclick="toggellike(${i})"
     >
   </div>
-      
-
     </div>
    <table class="section-book-main">
   <tr>
@@ -46,18 +44,15 @@ function renderBooks() {
     <td>${books[i].genre}</td>
   </tr>
 </table>
-
-
     <div class="white-line"></div>
-
     <h3>Kommentare:</h3>
     <div class="section-book-bootom">
       <div id="bookComments-${i}"></div>
-
     </div>
     </div>
-     <div class="input-feld"><input class="book-input" type="text" placeholder="Schreibe dein Kommentar">
-       <button class="btn" onclick=""></button></div>
+     <div class="input-feld">
+     <input id="input-book-${i}" class="book-input" type="text" placeholder="Schreibe dein Kommentar">
+      <img class="btn" onclick="addBookComment(${i})" src="assets/icons/papierflieger.png" alt="butten"></div>
     </section>
     </article>`;
   renderComments(i);
@@ -80,13 +75,37 @@ renderBooks()
 
 function renderComments(BookIndex){
   let commentsRef = document.getElementById(`bookComments-${BookIndex}`);
+  if (!commentsRef) return;
+  const comments = books[BookIndex].comments;
   commentsRef.innerHTML = "";
-  for (let i = 0; i < books[BookIndex].comments.length; i++) {
-    commentsRef.innerHTML += `
+  {
+    if (!comments || comments.length === 0) {
+      commentsRef.innerHTML += `<div class="commts-comment">kein Kommentare;schreibe du das erste</div>`;
+    }else{ 
+
+    for (let i = 0; i < books[BookIndex].comments.length; i++)
+       commentsRef.innerHTML += `
     <div class="commts-box">
-  <div class="commts-name">[${books[BookIndex].comments[i].name}]</div>
-  <div class="commts-comment">:${books[BookIndex].comments[i].comment}</div>
- </div>`;
-    
+    <div class="commts-name">[${books[BookIndex].comments[i].name}]</div>
+    <div class="commts-comment">:${books[BookIndex].comments[i].comment}</div>
+    </div>`;
+    }}
+}
+
+function addBookComment(BookIndex) {
+  let inputRef = document.getElementById(`input-book-${BookIndex}`)
+  let bookInput = inputRef.value;
+
+  if (bookInput) {
+    books[BookIndex].comments.unshift({
+  name: "Frederic",
+  comment: bookInput
+ 
+});
+ inputRef.value =""
+renderComments(BookIndex);
+  }else{
+    return alert("Bitte schreibe einen Kommentar!") ;
   }
+ 
 }
