@@ -4,6 +4,7 @@ const emptyHeart ="assets/img/empty-heart.png"
 
 
 function renderBooks() {
+  
   const bookRef = document.getElementById("book");
   bookRef.innerHTML = "";
     for (let i = 0; i< books.length; i++) {
@@ -45,22 +46,26 @@ function renderBooks() {
     <td>${books[i].genre}</td>
   </tr>
 </table>
+
+
     <div class="white-line"></div>
+
+    <h3>Kommentare:</h3>
     <div class="section-book-bootom">
-      <div class="book-comments">
-        <h3>Komentare:</h3>
-      </div>
-      <div class="book-form">
-       <section class="book-commentForm">${books[i].comments.name}</section>
-       <div class="input-feld"><input class="book-input" type="text" placeholder="Schreibe dein Kommentar">
-       <button class="btn" onclick=""></button></div>
-       
-      </div>
+      <div id="bookComments-${i}"></div>
+
     </div>
+    </div>
+     <div class="input-feld"><input class="book-input" type="text" placeholder="Schreibe dein Kommentar">
+       <button class="btn" onclick=""></button></div>
     </section>
     </article>`;
+  renderComments(i);
     }
+   
 }
+
+
 function toggellike(i){
   if (books[i].liked) {
     books[i].likes--
@@ -71,4 +76,17 @@ function toggellike(i){
 
   }
 renderBooks()
+}
+
+function renderComments(BookIndex){
+  let commentsRef = document.getElementById(`bookComments-${BookIndex}`);
+  commentsRef.innerHTML = "";
+  for (let i = 0; i < books[BookIndex].comments.length; i++) {
+    commentsRef.innerHTML += `
+    <div class="commts-box">
+  <div class="commts-name">[${books[BookIndex].comments[i].name}]</div>
+  <div class="commts-comment">:${books[BookIndex].comments[i].comment}</div>
+ </div>`;
+    
+  }
 }
