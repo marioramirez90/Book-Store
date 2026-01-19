@@ -23,6 +23,8 @@ main {
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
+
+    
 }
 footer{
     background-color: rgb(10, 34, 44);
@@ -32,4 +34,12 @@ footer{
     left: 0;
     width: 100%;
     
+}
+@media(max-width: 500px){
+.navbar{
+    width: 100%;
+}
+h1{
+    font-size: 20px;
+}
 }
