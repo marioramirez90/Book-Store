@@ -191,57 +191,52 @@ h3 {
 }
 
 @media(max-width: 370px){
+
 .image-book {
-    width: 310px;
+    width: 280px;
 }
 .Book-article {
    
-    width: 310px;
+    width: 280px;
     
 }
 
 .book-tittel h2 {
-    font-size: 20px;
+    font-size: 15px;
 
 }
 
 .white-line {
    
-    width: 310px;
+    width: 280px;
    
 }
 
 .book-main {
-    width: 310px;
+    width: 280px;
 }
 
 .section-book-main-header {
-    width: 310px;
+    width: 280px;
 }
 
 .book-price {
     color: red;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
 }
 
 .book-input {
-    width: 250px;
+    width: 220px;
     height: 25px;
     background-color: rgb(16, 69, 90);
     border: none;
 }
 .commts-box {
     display: grid;
-    grid-template-columns: 120px 150px 1fr;
+    grid-template-columns: 120px 120px 1fr;
     gap: 1px;
     margin-bottom: 20px;
     padding-left: 10px;
-}
-.navbar{
-    width: 320px;
-}
-.navbar h1{
-    font-size: 18px;
 }
 }
